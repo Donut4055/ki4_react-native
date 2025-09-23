@@ -100,7 +100,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="register-form"
         options={{
-          // title: 'Bài 10',
+          title: 'Bài 10',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.badge.plus" color={color} />,
         }}
       />
