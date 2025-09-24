@@ -11,7 +11,7 @@ export default function Bt2Screen() {
   };
 
   const decrease = () => {
-    setCount(prevCount => Math.max(0, prevCount - 1)); // Prevent negative numbers
+    setCount(prevCount => Math.max(0, prevCount - 1)); 
   };
 
   return (

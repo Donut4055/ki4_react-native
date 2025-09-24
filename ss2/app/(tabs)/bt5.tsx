@@ -12,7 +12,6 @@ import {
 import { ThemedView } from '@/components/themed-view';
 import { ThemedText } from '@/components/themed-text';
 
-// Replace with your actual logo path
 const LOGO_IMAGE = require('@/assets/images/logo.png');
 
 export default function Bt5Screen() {
@@ -21,10 +20,8 @@ export default function Bt5Screen() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = () => {
-    // Handle login logic here
     setIsLoading(true);
     console.log('Login attempt with:', { email, password });
-    // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);

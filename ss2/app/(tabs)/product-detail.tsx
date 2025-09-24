@@ -22,7 +22,6 @@ const ProductDetailScreen = () => {
 
   const sizes = ['S', 'M', 'L', 'XL'];
   
-  // Mock product data
   const product = {
     name: 'Áo thun cổ tròn',
     rating: 4.9,
@@ -35,7 +34,6 @@ const ProductDetailScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        {/* Product Image Section */}
         <View style={styles.imageContainer}>
           <Image 
             source={{ uri: 'https://i.pinimg.com/1200x/41/a9/82/41a9827c63847e1c902b8abab8c43b4d.jpg' }} 
@@ -43,7 +41,6 @@ const ProductDetailScreen = () => {
             resizeMode="cover"
           />
           
-          {/* Back Button */}
           <TouchableOpacity 
             style={styles.backButton}
             onPress={() => navigation.goBack()}
@@ -51,7 +48,6 @@ const ProductDetailScreen = () => {
             <ArrowLeft size={24} color="#000" />
           </TouchableOpacity>
           
-          {/* Favorite Button */}
           <TouchableOpacity 
             style={styles.favoriteButton}
             onPress={() => setIsFavorite(!isFavorite)}
@@ -64,7 +60,6 @@ const ProductDetailScreen = () => {
           </TouchableOpacity>
         </View>
 
-        {/* Product Info Section */}
         <View style={styles.infoContainer}>
           <View style={styles.header}>
             <ThemedText style={styles.productName}>{product.name}</ThemedText>
@@ -83,7 +78,6 @@ const ProductDetailScreen = () => {
             </View>
           </View>
 
-          {/* Size Selection */}
           <View style={styles.section}>
             <ThemedText style={styles.sectionTitle}>Chọn Kích thước</ThemedText>
             <View style={styles.sizeContainer}>
@@ -109,7 +103,6 @@ const ProductDetailScreen = () => {
             </View>
           </View>
 
-          {/* Product Description */}
           <View style={styles.section}>
             <ThemedText style={styles.sectionTitle}>Mô tả sản phẩm</ThemedText>
             <ThemedText style={styles.description}>
@@ -119,7 +112,6 @@ const ProductDetailScreen = () => {
         </View>
       </ScrollView>
 
-      {/* Footer Buttons */}
       <View style={styles.footer}>
         <TouchableOpacity style={styles.addToCartButton}>
           <ShoppingCart size={20} color="#000" style={styles.buttonIcon} />
@@ -141,7 +133,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: '100%',
-    height: width * 1.1, // Slightly taller than square
+    height: width * 1.1, 
     position: 'relative',
   },
   productImage: {

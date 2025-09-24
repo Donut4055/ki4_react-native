@@ -93,7 +93,6 @@ export default function Bt7Screen() {
     setNewMessage('');
   };
 
-  // Simulate received message
   const simulateReply = () => {
     if (newMessage.trim() === '') return;
     
@@ -133,12 +132,10 @@ export default function Bt7Screen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
       >
-        {/* Chat Header */}
         <View style={styles.header}>
           <ThemedText style={styles.headerTitle}>Trò chuyện</ThemedText>
         </View>
 
-        {/* Messages List */}
         <ScrollView 
           ref={scrollViewRef}
           style={styles.messagesContainer}
@@ -221,7 +218,7 @@ const styles = StyleSheet.create({
   },
   messagesContent: {
     paddingVertical: 16,
-    paddingBottom: 80, // Add padding to avoid input field covering messages
+    paddingBottom: 80, 
   },
   messageBubble: {
     marginVertical: 4,

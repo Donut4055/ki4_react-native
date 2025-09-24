@@ -2,7 +2,6 @@ import { StyleSheet, View } from 'react-native';
 import { ThemedView } from '@/components/themed-view';
 import { BusinessCard } from '@/components/BusinessCard';
 
-// You can replace this with your actual image
 const PROFILE_IMAGE = require('@/assets/images/avatar.jpg');
 
 export default function Bt1Screen() {

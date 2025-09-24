@@ -11,7 +11,6 @@ export default function Bt3Screen() {
   return (
     <ThemedView style={styles.container}>
       <View style={styles.formContainer}>
-        {/* Name Input */}
         <View style={styles.inputGroup}>
           <ThemedText style={styles.label}>Họ và tên:</ThemedText>
           <TextInput
@@ -23,7 +22,6 @@ export default function Bt3Screen() {
           />
         </View>
 
-        {/* Email Input */}
         <View style={styles.inputGroup}>
           <ThemedText style={styles.label}>Email:</ThemedText>
           <TextInput
@@ -37,7 +35,6 @@ export default function Bt3Screen() {
           />
         </View>
 
-        {/* Phone Input */}
         <View style={styles.inputGroup}>
           <ThemedText style={styles.label}>Số điện thoại:</ThemedText>
           <TextInput

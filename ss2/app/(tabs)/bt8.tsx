@@ -16,7 +16,6 @@ const ButtonShowcase = () => {
 
   const simulateAsyncAction = () => {
     setIsLoading(true);
-    // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
       Alert.alert('Thành công', 'Tác vụ đã hoàn thành!');
@@ -27,7 +26,6 @@ const ButtonShowcase = () => {
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <ThemedText style={styles.title}>Thư viện nút bấm</ThemedText>
       
-      {/* Primary Buttons */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Nút chính (Primary)</ThemedText>
         <View style={styles.buttonGroup}>
@@ -47,7 +45,6 @@ const ButtonShowcase = () => {
         </View>
       </View>
 
-      {/* Secondary Buttons */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Nút phụ (Secondary)</ThemedText>
         <View style={styles.buttonGroup}>
@@ -66,7 +63,6 @@ const ButtonShowcase = () => {
         </View>
       </View>
 
-      {/* Danger Buttons */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Nút nguy hiểm (Danger)</ThemedText>
         <View style={styles.buttonGroup}>
@@ -79,7 +75,6 @@ const ButtonShowcase = () => {
         </View>
       </View>
 
-      {/* Disabled Buttons */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Nút bị vô hiệu hóa</ThemedText>
         <View style={styles.buttonGroup}>
@@ -91,7 +86,6 @@ const ButtonShowcase = () => {
         </View>
       </View>
 
-      {/* Custom Buttons */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Nút tùy chỉnh</ThemedText>
         <View style={styles.buttonGroup}>
@@ -127,7 +121,6 @@ const ButtonShowcase = () => {
         </View>
       </View>
 
-      {/* Full Width Button */}
       <View style={[styles.section, { marginBottom: 40 }]}>
         <ThemedText style={styles.sectionTitle}>Nút full chiều rộng</ThemedText>
         <CustomButton 

@@ -2,7 +2,6 @@ import React from 'react';
 import { View, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 
-// Generate mock image data from picsum.photos
 const generateImageUrls = (count: number) => {
   return Array.from({ length: count }, (_, index) => ({
     id: index + 1,
@@ -13,10 +12,10 @@ const generateImageUrls = (count: number) => {
 };
 
 const ImageGalleryScreen = () => {
-  const images = generateImageUrls(30); // Generate 30 random images
+  const images = generateImageUrls(30); 
   const numColumns = 3;
   const screenWidth = Dimensions.get('window').width;
-  const imageSize = (screenWidth - 16 - (numColumns - 1) * 8) / numColumns; // 16 = horizontal padding, 8 = gap between items
+  const imageSize = (screenWidth - 16 - (numColumns - 1) * 8) / numColumns; 
 
   return (
     <View style={styles.container}>
@@ -32,7 +31,6 @@ const ImageGalleryScreen = () => {
               style={[styles.imageContainer, { width: imageSize, height: imageSize }]}
               activeOpacity={0.7}
               onPress={() => {
-                // Handle image press (e.g., open fullscreen)
                 console.log('Pressed image:', image.id);
               }}
             >
@@ -63,7 +61,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   scrollContainer: {
-    paddingHorizontal: 8, // Half of the gap between items
+    paddingHorizontal: 8, 
   },
   gridContainer: {
     flexDirection: 'row',

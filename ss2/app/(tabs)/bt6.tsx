@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 
-// Sample tasks data
 const initialTasks = [
   { id: 1, text: 'Hoàn thành bài tập React Native', completed: false },
   { id: 2, text: 'Đi chợ mua đồ', completed: true },
@@ -25,7 +24,7 @@ const colors = ['#FFE0B2', '#C8E6C9', '#B3E5FC', '#E1BEE7', '#FFCDD2', '#F8BBD0'
 export default function Bt6Screen() {
   const [tasks, setTasks] = useState(initialTasks);
   const [newTask, setNewTask] = useState('');
-  const [taskId, setTaskId] = useState(6); // Starting ID for new tasks
+  const [taskId, setTaskId] = useState(6); 
 
   const addTask = () => {
     if (newTask.trim() === '') return;

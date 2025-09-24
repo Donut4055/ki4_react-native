@@ -17,13 +17,11 @@ const RegisterForm = () => {
   const [emailError, setEmailError] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
 
-  // Validate email format
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
-  // Handle email input changes
   const handleEmailChange = (text: string) => {
     setEmail(text);
     if (text === '') {
@@ -36,23 +34,19 @@ const RegisterForm = () => {
     validateForm(text, password);
   };
 
-  // Handle password input changes
   const handlePasswordChange = (text: string) => {
     setPassword(text);
     validateForm(email, text);
   };
 
-  // Validate entire form
   const validateForm = (email: string, password: string) => {
     const isEmailValid = validateEmail(email);
     const isPasswordValid = password.length >= 6;
     setIsFormValid(isEmailValid && isPasswordValid);
   };
 
-  // Handle form submission
   const handleSubmit = () => {
     if (isFormValid) {
-      // Handle successful registration
       Alert.alert('Thành công', 'Đăng ký thành công!');
     }
   };
@@ -62,7 +56,6 @@ const RegisterForm = () => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <ThemedText style={styles.title}>Đăng ký tài khoản</ThemedText>
         
-        {/* Email Input */}
         <View style={styles.inputGroup}>
           <ThemedText style={styles.label}>Email</ThemedText>
           <TextInput
@@ -81,7 +74,6 @@ const RegisterForm = () => {
           {emailError ? <Text style={styles.errorText}>{emailError}</Text> : null}
         </View>
 
-        {/* Password Input */}
         <View style={styles.inputGroup}>
           <ThemedText style={styles.label}>Mật khẩu</ThemedText>
           <TextInput
@@ -100,7 +92,6 @@ const RegisterForm = () => {
           </ThemedText>
         </View>
 
-        {/* Register Button */}
         <TouchableOpacity
           style={[
             styles.button,
@@ -112,7 +103,6 @@ const RegisterForm = () => {
           <ThemedText style={styles.buttonText}>Đăng ký</ThemedText>
         </TouchableOpacity>
 
-        {/* Form State Info */}
         <View style={styles.infoBox}>
           <ThemedText style={styles.infoTitle}>Trạng thái form:</ThemedText>
           <ThemedText style={styles.infoText}>
