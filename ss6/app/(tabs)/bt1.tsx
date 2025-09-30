@@ -24,12 +24,14 @@ const EmployeeList = () => {
 
   const renderItem = ({ item }: { item: Employee }) => (
     <View style={styles.item}>
+      <View style={styles.avatar}>
+        <Text style={styles.avatarText}>{item.name.charAt(0)}</Text>
+      </View>
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.position}>{item.position}</Text>
-      <Text style={styles.department}>{item.department}</Text>
     </View>
   );
-
+  
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Danh sách nhân viên</Text>
@@ -38,6 +40,8 @@ const EmployeeList = () => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.list}
+        numColumns={3}
+        columnWrapperStyle={{ justifyContent: 'space-between' }}
       />
     </SafeAreaView>
   );
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
-    padding: 16,
+    padding: 12,
   },
   title: {
     fontSize: 24,
@@ -60,30 +64,46 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   item: {
+    flex: 1,
     backgroundColor: 'white',
-    padding: 16,
-    marginVertical: 8,
+    padding: 12,
+    margin: 4,
     borderRadius: 8,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
+    shadowRadius: 2,
     elevation: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#4a90e2',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 8,
+  },
+  avatarText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   name: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 12,
+    fontWeight: '600',
     color: '#333',
+    textAlign: 'center',
+    marginBottom: 2,
+    width: '100%',
   },
   position: {
-    fontSize: 14,
+    fontSize: 11,
     color: '#666',
-    marginTop: 4,
-  },
-  department: {
-    fontSize: 14,
-    color: '#888',
-    fontStyle: 'italic',
+    textAlign: 'center',
+    width: '100%',
   },
 });
 
