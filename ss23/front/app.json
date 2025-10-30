@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "ss18",
-    "slug": "ss18",
+    "name": "Contacts_FullStack",
+    "slug": "Contacts_FullStack",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "ss18",
+    "scheme": "contactsfullstack",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -36,17 +36,6 @@
           "backgroundColor": "#ffffff",
           "dark": {
             "backgroundColor": "#000000"
-          }
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "minSdkVersion": 21, // Điều chỉnh minSdk tuỳ ý, ví dụ: 21 (Android 5.0), 23 (Android 6.0), 24...
-            "compileSdkVersion": 35, // Điều chỉnh compile SDK tuỳ ý, ví dụ: 33, 34, 35 (Android 13, 14, 15)
-            "targetSdkVersion": 35, // Điều chỉnh target SDK, ví dụ: 35 (Android 15)
-            "buildToolsVersion": "35.0.0" // Tuỳ chọn
           }
         }
       ]
